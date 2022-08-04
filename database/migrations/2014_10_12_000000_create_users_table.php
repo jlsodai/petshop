@@ -23,8 +23,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->uuid('avatar')->nullable();
-            $table->string('address')->unique();
-            $table->string('phone_number')->unique();
+            $table->string('address');
+            $table->string('phone_number');
             $table->boolean('is_marketing')->default(0);
             $table->rememberToken();
             $table->timestamps();
