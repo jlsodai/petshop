@@ -122,7 +122,7 @@ return [
     |
     */
 
-    'algo' => env('JWT_ALGO', 'RS256'),
+    'algo' => env('JWT_ALGO', 'HS256'),
 
     /*
     |--------------------------------------------------------------------------
@@ -137,11 +137,8 @@ return [
 
     'required_claims' => [
         'iss',
-        'iat',
         'exp',
-        'nbf',
-        'sub',
-        'jti',
+        'user_uuid',
     ],
 
     /*
