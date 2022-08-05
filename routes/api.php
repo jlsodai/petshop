@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 /*
  * API version 1 route
  */
-Route::group(['prefix' => 'v1', 'name' => 'v1.'], function() {
+Route::group([
+    'prefix' => 'v1',
+    'namespace' => 'App\Http\Controllers\Api\V1',
+    'as' => 'v1.'
+], function() {
     require base_path('routes/api_v1.php');
 });
