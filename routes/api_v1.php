@@ -35,3 +35,14 @@ Route::group([
     Route::put('/{payment:uuid}', 'update')->name('update');
     Route::delete('/{payment:uuid}', 'delete')->name('delete');
 });
+
+/*
+ * Payment Routes
+ */
+Route::group([
+    'controller' => CurrencyController::class,
+    'prefix' => 'currency',
+    'as' => 'currency.'
+], function() {
+    Route::get('/convert', 'convert');
+});
