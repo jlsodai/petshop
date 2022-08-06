@@ -15,4 +15,6 @@ class Order extends Model
         "products" => "array",
         "shipped_at" => "datetime"
     ];
+
+    protected $guarded = [];
 }
