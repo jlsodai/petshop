@@ -37,6 +37,23 @@ Route::group([
 });
 
 /*
+ * Orders Routes
+ */
+Route::group([
+    'controller' => OrderController::class,
+    'as' => 'orders.'
+], function() {
+    Route::get('/orders', 'index')->name('index');
+    Route::get('/orders/dashboard', 'dashboard')->name('dashboard');
+    Route::get('/orders/shipment-locator', 'shipmentLocator')->name('shipmentLocator');
+    Route::post('/order/create', 'create')->name('create');
+    Route::get('/order/{order:uuid}', 'show')->name('show');
+    Route::put('/order/{order:uuid}', 'update')->name('update');
+    Route::delete('/order/{order:uuid}', 'delete')->name('delete');
+    Route::get('/order/{order:uuid}/download', 'download')->name('download');
+});
+
+/*
  * Payment Routes
  */
 Route::group([
