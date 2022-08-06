@@ -37,7 +37,7 @@ class OrderFactory extends Factory
                 "shipping" => fake()->streetAddress(),
             ],
             "amount" => $product->price * $qty,
-            "shipped_at" => $order_status == "shipped" ? now() : null
+            "shipped_at" => $order_status->title == "shipped" ? now() : null
         ];
     }
 }
