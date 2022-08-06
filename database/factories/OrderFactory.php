@@ -29,7 +29,7 @@ class OrderFactory extends Factory
             "order_status_id" => $order_status,
             "payment_id" => Payment::factory()->create()->id,
             "products" => [[
-                "product" => $product->uuid,
+                "uuid" => $product->uuid,
                 "qty" => $qty
             ]],
             "address" => [
