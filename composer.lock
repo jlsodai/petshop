@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5df87528a4c160f2e00406ab8cc0b0a3",
+    "content-hash": "c554932a59ee68674cd6fd1b9fb6f5bc",
     "packages": [
         {
             "name": "brick/math",
@@ -892,6 +892,41 @@
                 }
             ],
             "time": "2022-06-20T21:43:11+00:00"
+        },
+        {
+            "name": "julius/currency-convert",
+            "version": "dev-develop",
+            "dist": {
+                "type": "path",
+                "url": "./packages/julius/currency-convert",
+                "reference": "6cae6569a1fabb5272589afe627fe42d99d647fb"
+            },
+            "type": "n",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Julius\\CurrencyConvert\\CurrencyConvertServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Julius\\CurrencyConvert\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Juilus Odai",
+                    "email": "jlsodai@gmail.com"
+                }
+            ],
+            "description": "This converts an amount from EUR to a different currency",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "laravel/framework",
@@ -8331,7 +8366,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "julius/currency-convert": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
