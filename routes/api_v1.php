@@ -51,6 +51,7 @@ Route::group([
     Route::put('/order/{order:uuid}', 'update')->name('update');
     Route::delete('/order/{order:uuid}', 'delete')->name('delete');
     Route::get('/order/{order:uuid}/download', 'download')->name('download');
+    Route::get('/order/{order:uuid}/payment', 'payment')->name('payment');
 });
 
 /*
