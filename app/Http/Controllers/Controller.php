@@ -12,12 +12,6 @@ use Illuminate\Routing\Controller as BaseController;
  *    title="PetShop API Documentation",
  *    version="1.0.0",
  * )
- * 
- * @OA\Get(
- *     path="/",
- *     description="Home page",
- *     @OA\Response(response="default", description="Welcome page")
- * )
  */
 
 class Controller extends BaseController
