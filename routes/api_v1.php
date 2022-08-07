@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Julius\Stripe\Http\Controllers\StripeController;
 
 Route::get('/', function () {
     return response(['status' => 'success', 'api_version' => 1]);
@@ -51,8 +52,9 @@ Route::group([
     Route::put('/order/{order:uuid}', 'update')->name('update');
     Route::delete('/order/{order:uuid}', 'delete')->name('delete');
     Route::get('/order/{order:uuid}/download', 'download')->name('download');
-    Route::get('/order/{order:uuid}/payment', 'payment')->name('payment');
 });
+
+Route::get('/order/{order:uuid}/payment', [StripeController::class, 'payment'])->name('payment');
 
 /*
  * Payment Routes
