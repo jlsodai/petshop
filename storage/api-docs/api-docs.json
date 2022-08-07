@@ -5,12 +5,29 @@
         "version": "1.0.0"
     },
     "paths": {
-        "/": {
+        "/api/v1/payments": {
             "get": {
-                "description": "Home page",
+                "tags": [
+                    "Payments"
+                ],
+                "summary": "List all payments",
+                "description": "Return list of payments",
+                "operationId": "getPaymentsList",
                 "responses": {
-                    "default": {
-                        "description": "Welcome page"
+                    "200": {
+                        "description": "OK"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Page not found"
+                    },
+                    "500": {
+                        "description": "Internal server error"
                     }
                 }
             }
