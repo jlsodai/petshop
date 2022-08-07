@@ -10,6 +10,36 @@ use Illuminate\Http\Request;
 class PaymentController extends Controller
 {
     /**
+     * @OA\Get(
+     *      path="/api/v1/payments",
+     *      operationId="getPaymentsList",
+     *      tags={"Payments"},
+     *      summary="List all payments",
+     *      description="Return list of payments",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthorized",
+     *      ),
+     *      @OA\Response(
+     *          response=404,
+     *          description="Page not found"
+     *      )
+     *      @OA\Response(
+     *          response=422,
+     *          description="Unprocessable Entity"
+     *      )
+     *      @OA\Response(
+     *          response=500,
+     *          description="Internal Server Error"
+     *      )
+     * )
+     */
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
