@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2ef4b5d204931b69958077af0e7b523",
+    "content-hash": "9061798da114661eb66142e69240ca45",
     "packages": [
         {
             "name": "brick/math",
@@ -924,6 +924,37 @@
                 }
             ],
             "description": "This converts an amount from EUR to a different currency",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "julius/stripe",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./packages/julius/stripe",
+                "reference": "d9d552363a61d0826bf2d72d6a5358f225de395a"
+            },
+            "require": {
+                "stripe/stripe-php": "^9.1@beta"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Julius\\Stripe\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Julius Odai",
+                    "email": "jlsodai@gmail.com"
+                }
+            ],
+            "description": "exposes the needed endpoints to perform a backend payment with stripe",
             "transport-options": {
                 "relative": true
             }
@@ -3204,16 +3235,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v9.0.0",
+            "version": "v9.1.0-beta.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "e405c178c2167f568e654296ad6b20eb461761b5"
+                "reference": "2510e69097ea2523a8b0f09a3f98999bdf75239b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/e405c178c2167f568e654296ad6b20eb461761b5",
-                "reference": "e405c178c2167f568e654296ad6b20eb461761b5",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/2510e69097ea2523a8b0f09a3f98999bdf75239b",
+                "reference": "2510e69097ea2523a8b0f09a3f98999bdf75239b",
                 "shasum": ""
             },
             "require": {
@@ -3258,9 +3289,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v9.0.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v9.1.0-beta.1"
             },
-            "time": "2022-08-02T15:47:44+00:00"
+            "time": "2022-08-03T21:04:33+00:00"
         },
         {
             "name": "symfony/console",
@@ -8427,7 +8458,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "julius/currency-convert": 20
+        "julius/currency-convert": 20,
+        "julius/stripe": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
