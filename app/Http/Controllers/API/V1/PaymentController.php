@@ -10,7 +10,13 @@ use Illuminate\Http\Request;
 class PaymentController extends Controller
 {
     /**
-     * @OA\Get(
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    /**
+     * @OA\GET(
      *      path="/api/v1/payments",
      *      operationId="getPaymentsList",
      *      tags={"Payments"},
@@ -18,32 +24,27 @@ class PaymentController extends Controller
      *      description="Return list of payments",
      *      @OA\Response(
      *          response=200,
-     *          description="Successful operation",
-     *       ),
+     *          description="OK",
+     *      ),
+     *      @OA\Response(
+     *          response=422,
+     *          description="Unprocessable Entity",
+     *      ),
      *      @OA\Response(
      *          response=401,
-     *          description="Unauthorized",
+     *          description="Unauthorized"
      *      ),
      *      @OA\Response(
      *          response=404,
      *          description="Page not found"
-     *      )
-     *      @OA\Response(
-     *          response=422,
-     *          description="Unprocessable Entity"
-     *      )
+     *      ),
      *      @OA\Response(
      *          response=500,
-     *          description="Internal Server Error"
-     *      )
+     *          description="Internal server error",
+     *      ),
      * )
      */
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return response(Payment::paginate());
