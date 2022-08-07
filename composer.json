@@ -13,7 +13,7 @@
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
-        "julius/currency-convert": "dev-develop",
+        "julius/currency-convert": "dev-master",
         "julius/stripe": "dev-master",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
