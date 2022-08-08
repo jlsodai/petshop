@@ -24,6 +24,10 @@ Next, run ```php artisan jwt:generate-certs``` to generate certificates. The ```
 
 Visit {{base_url}}/api/documentation to see the project's API Docs
 
+## Local Packages
+
+This project has 2 local packages ```julius/stripe``` and ```julius/currency-convert```. Navigate to their respective directories in ```./packages/julius/stripe``` and ```./packages/julius/currency-convert``` to see their README.md documentation.
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
