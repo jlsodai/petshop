@@ -1,6 +1,0 @@
-[submodule "stripe"]
-	path = stripe
-	url = ./packages/julius/stripe
-[submodule "currency-convert"]
-	path = currency-convert
-	url = ./packages/julius/currency-convert
