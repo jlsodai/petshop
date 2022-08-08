@@ -1,0 +1,26 @@
+{
+    "name": "julius/currency-convert",
+    "description": "This converts an amount from EUR to a different currency",
+    "type": "n",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Julius\\CurrencyConvert\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juilus Odai",
+            "email": "jlsodai@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel" : {
+            "providers" : [
+                "Julius\\CurrencyConvert\\CurrencyConvertServiceProvider"
+            ]
+        }
+    }
+}

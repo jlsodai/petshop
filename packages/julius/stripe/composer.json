@@ -1,0 +1,20 @@
+{
+    "name": "julius/stripe",
+    "description": "exposes the needed endpoints to perform a backend payment with stripe",
+    "require": {
+        "stripe/stripe-php": "^9.1@beta"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Julius\\Stripe\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Julius Odai",
+            "email": "jlsodai@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
